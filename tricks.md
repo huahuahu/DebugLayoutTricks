@@ -10,7 +10,7 @@ There are three view debug tools for Apple's platform.
 
 They can inspect current view hierarchy and analysis the constraints that effect a view's layout. Some of them may even view the results of changed constraints on the fly  with out rebuilding the whole app.
 
-In this article, I will introduce the tricks for the Builtin view debugger.
+In this article, I will introduce the tricks for the builtin view debugger.
 
 ## Launch the View Debugger
 After running the app from Xcode, you can start the view debugger in two approaches:
@@ -42,7 +42,7 @@ Let's see an example. In the snapshot below, the green view is in front of the y
 
 ### Get Pointer of Objects
 We can just copying the selected objects and use them in LLDB. It has been properly.
-![NnsO9rhFXwdgot7](https://i.loli.net/2021/08/12/NnsO9rhFXwdgot7.gif)
+![NnsO9rhFXwdgot7](https://i.loli.net/2021/08/12/NnsO9rhFXwdgot7.gif)  
 Views, constraints, view controllers all can be selected.
 
 ### Update Layout Without Rebuild
@@ -129,6 +129,18 @@ Using `exerciseAmbiguityInLayout`, we can make the layout engine switch between 
 ![rov9dpKQf3Bagqj](https://i.loli.net/2021/08/12/rov9dpKQf3Bagqj.gif)
 
 ## Frame-based layout
+Frame-based layout is straight forward. The view's frame is set explicitly by code.
+### Override `frame` Property  
+```
+   override var frame: CGRect {
+      get { super.frame }
+      set {
+         print("new frame is\(newValue)")
+         super.frame = newValue
+      }
+   }
+```
+Using this approach, we can log all the frame changes.
 
 
 
@@ -138,3 +150,4 @@ Using `exerciseAmbiguityInLayout`, we can make the layout engine switch between 
 - [Advanced Debugging with Xcode and LLDB](https://developer.apple.com/videos/play/wwdc2018/412/)
 - [Lookin](https://lookin.work/)
 - [Reveal](https://revealapp.com/)
+- [Debugging Auto Layout](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/DebuggingTricksandTips.html#//apple_ref/doc/uid/TP40010853-CH21-SW1)

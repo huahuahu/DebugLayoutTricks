@@ -21,6 +21,7 @@
 		60C8337B26C4EA3400CE90A6 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C8337A26C4EA3400CE90A6 /* DebugView.swift */; };
 		60C8337D26C53A3B00CE90A6 /* AmbiguityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C8337C26C53A3B00CE90A6 /* AmbiguityVC.swift */; };
 		60C8337F26C55B8200CE90A6 /* UnsatisfiableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C8337E26C55B8200CE90A6 /* UnsatisfiableVC.swift */; };
+		60C8338126C56F1B00CE90A6 /* FramebaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C8338026C56F1B00CE90A6 /* FramebaseVC.swift */; };
 		ECF20A16A004673115C88EA9 /* Pods_Demo_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A294B0457CB4583336579FD9 /* Pods_Demo_DemoUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		60C8337A26C4EA3400CE90A6 /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
 		60C8337C26C53A3B00CE90A6 /* AmbiguityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbiguityVC.swift; sourceTree = "<group>"; };
 		60C8337E26C55B8200CE90A6 /* UnsatisfiableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsatisfiableVC.swift; sourceTree = "<group>"; };
+		60C8338026C56F1B00CE90A6 /* FramebaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramebaseVC.swift; sourceTree = "<group>"; };
 		81FE4AA071F34FF66D472B48 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		A294B0457CB4583336579FD9 /* Pods_Demo_DemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo_DemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6B517342DF4F20E5BA41FCF /* Pods_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +176,7 @@
 				60C8337726C4E8F800CE90A6 /* BasicVC.swift */,
 				60C8337C26C53A3B00CE90A6 /* AmbiguityVC.swift */,
 				60C8337E26C55B8200CE90A6 /* UnsatisfiableVC.swift */,
+				60C8338026C56F1B00CE90A6 /* FramebaseVC.swift */,
 			);
 			path = Scenario;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60C8338126C56F1B00CE90A6 /* FramebaseVC.swift in Sources */,
 				60C8337826C4E8F800CE90A6 /* BasicVC.swift in Sources */,
 				60C8337B26C4EA3400CE90A6 /* DebugView.swift in Sources */,
 				60C8337F26C55B8200CE90A6 /* UnsatisfiableVC.swift in Sources */,

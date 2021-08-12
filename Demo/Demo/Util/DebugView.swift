@@ -10,7 +10,7 @@ import UIKit
 
 class DebugView: UIView {
     override func layoutSubviews() {
-        print("\(#function)")
+//        print("\(#function)")
         super.layoutSubviews()
     }
 
@@ -27,5 +27,13 @@ class DebugView: UIView {
     override var intrinsicContentSize: CGSize {
         print("\(#function)")
         return super.intrinsicContentSize
+    }
+
+    override var frame: CGRect {
+        get { super.frame }
+        set {
+            print("new frame is\(newValue)")
+            super.frame = newValue
+        }
     }
 }

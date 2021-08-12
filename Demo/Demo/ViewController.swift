@@ -11,6 +11,7 @@ enum Scenario: String, CaseIterable {
     case basic
     case ambiguity
     case unsatisfiable
+    case frameBase
 
     var targetVC: UIViewController.Type {
         switch self {
@@ -20,6 +21,8 @@ enum Scenario: String, CaseIterable {
             return AmbiguityVC.self
         case .unsatisfiable:
             return UnsatisfiableVC.self
+        case .frameBase:
+            return FramebaseVC.self
         }
     }
 }
