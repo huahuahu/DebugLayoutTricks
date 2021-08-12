@@ -5,6 +5,7 @@ target 'Demo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'SwiftLint', '0.43.1'
+  pod 'SwiftFormat/CLI', '0.44.7'
 
   # Pods for Demo
 
