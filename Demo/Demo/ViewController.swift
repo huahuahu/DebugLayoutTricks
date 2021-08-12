@@ -9,6 +9,19 @@ import UIKit
 
 enum Scenario: String, CaseIterable {
     case basic
+    case ambiguity
+    case unsatisfiable
+
+    var targetVC: UIViewController.Type {
+        switch self {
+        case .basic:
+            return BasicVC.self
+        case .ambiguity:
+            return AmbiguityVC.self
+        case .unsatisfiable:
+            return UnsatisfiableVC.self
+        }
+    }
 }
 
 class ViewController: UIViewController {
@@ -42,5 +55,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: ViewController.cellIdentifier, for: indexPath)
         cell.textLabel?.text = Scenario.allCases[indexPath.row].rawValue
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let scenario = Scenario.allCases[indexPath.row]
+        let vc = scenario.targetVC.init()
+        navigationController?.pushViewController(vc, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
